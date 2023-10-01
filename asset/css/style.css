@@ -1,0 +1,187 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "menu_de_navegacion"
+        "section"
+        "contenido"
+        "botones"
+        "footer";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+menu {
+    grid-area: menu_de_navegacion;
+    display: flex;
+    justify-content: space-between;
+    background-color:#7ed7c9;
+    margin: 0px;
+}
+.precios{
+    width: 300px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.hamburguesa {
+    width: 20px;
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: large;
+}
+
+h5 {
+    font-size: medium;
+    margin: 0px;
+}
+
+section {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+article {
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(103, 103, 184, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin: 0px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.iconos {
+    display: flex;
+}
+
+.barras {justify-content: space-evenly;}
+
+.iconos_size {
+    width: 40px;
+    height: 40px;
+}
+
+.camas {
+    width: 30vh;
+    height: 18vh;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(197, 197, 223, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:aqua;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton_compra {
+    width: 120px;
+    height: 30px;
+}
+
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aqua;
+}
+
+.tarjeta {
+    margin: 15px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "menu_de_navegacion section"
+            "menu_de_navegacion contenido"
+            "menu_de_navegacion contenido"
+            "footer botones";
+        grid-template-rows: 1fr 8fr;
+        grid-template-columns: 20% 80%;
+    }
+
+    menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .menu_lateral {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titulo {
+        justify-content: start;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .hamburguesa {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .menu_lateral {
+        display: none
+    }
+}
